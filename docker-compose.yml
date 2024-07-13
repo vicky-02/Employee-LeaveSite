@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=myLoginRegisterDB
+      - MONGO_INITDB_ROOT_USERNAME=vicky
+      - MONGO_INITDB_ROOT_PASSWORD=12345
+    networks:
+      - backend
+  
+
+  spring-boot-app:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=mongodb://mongo:27017/myLoginRegisterDB
+     
+   
+    
+    networks:
+      - backend
+
+
+  react-app:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - spring-boot-app
+    networks:
+      - backend
+
+
+  # mongo:
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   networks:
+  #     - backend
+
+
+  
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
+    driver: bridge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+

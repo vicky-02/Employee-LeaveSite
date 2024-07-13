@@ -1,0 +1,230 @@
+/* homepage.css */
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  padding: 10px; /* Add some padding for better spacing */
+  position: relative; /* Make the container position relative */
+}
+
+/* Homepage styles */
+.homepage {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+a{
+  color: #23e95e;
+}
+
+/* Apply leave button */
+.button,
+.Apld-btn,
+.logout-btn {
+  background-color: #3e8aee;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0.5rem 0;
+  border-radius: 25px; /* Add border-radius for a rounded button */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Apply leave button hover effect */
+.button:hover,
+.Apld-btn:hover,
+.logout-btn:hover {
+  background-color: #23e95e; /* Darken color on hover */
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #a20404;
+  margin-right: 2px;
+}
+
+/* Leave list styles */
+.leave-list {
+  max-height: 30rem;
+  /* overflow-y: scroll; */
+  margin-top: 20px;
+  width: 100%; /* Ensure the list takes full width */
+  padding-left: 6rem;
+  padding-right: 6rem;
+  overflow-x: auto; /* Add horizontal scrollbar when necessary */
+  margin-bottom: 60px; /* Ensure space for the footer */
+}
+
+.leave-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leave-list th,
+.leave-list td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.leave-list th {
+  background-color: #f2f2f2;
+}
+
+.leave-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.edit-btn:hover,
+.del-button:hover{
+  background-color: #faa507;
+}
+/* Delete button style */
+.del-button {
+  border-radius: 10px;
+  background-color: rgb(236, 69, 69);
+}
+
+/* Edit button style */
+.edit-btn {
+  border-radius: 8px;
+  background-color: #fcd690;
+}
+
+.Acpt-btn{
+  background-color: rgb(54, 164, 54);
+  gap: 2px;
+  margin-right: 10px;
+}
+
+.Rej-btn{
+  background-color: rgb(247 70 70);
+
+}
+
+.pending-status {
+  color: orange;
+  font-weight: bold;
+}
+
+.accept-status {
+  color: #30ed30;
+  font-weight: bold;
+}
+
+.reject-status {
+  
+  color: red;
+  font-weight: bold;
+}
+
+
+/* Footer styles */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically on smaller screens */
+  }
+
+  .homepage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button,
+  .Apld-btn,
+  .logout-btn {
+    width: 100%; /* Make buttons full width on smaller screens */
+    padding: 0.75rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .leave-list table {
+    font-size: 0.9rem; /* Decrease font size for table on smaller screens */
+  }
+
+  .footer {
+    position: relative; /* Change footer position to relative for proper display on smaller screens */
+  }
+}
+h2{
+  color: white;
+}
+
+.image{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.image img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.pagination{
+  margin-top: 15px;
+  justify-content: center;
+  /* align-items: center; */
+}
+.page-btn{
+  margin-right: 2px;
+  background-color: #ffffd1;
+}
+.prev-btn{
+  margin-right: 2px;
+  background-color: #423f3f;
+  /* text-decoration-color: white; */
+  color: white;
+}
+
+.setting{
+  background: none;
+  border: none;
+}
+
+.search-bar {
+  width: 74%;
+  max-width: 216px;
+  padding: 4px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin: 6px;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+.register{
+  margin-bottom: 80px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}

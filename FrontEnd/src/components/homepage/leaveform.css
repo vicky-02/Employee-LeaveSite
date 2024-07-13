@@ -1,0 +1,77 @@
+.leave-form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.image{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.image img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.leave-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.leave-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.leave-form input[type="date"],
+.leave-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.leave-form select {
+  cursor: pointer;
+}
+
+.leave-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.leave-form button:hover {
+  background-color: #45a049;
+}
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-text {
+  color: #f3f7f5; 
+  font-size: 1.5rem; 
+  text-align: center; 
+}
